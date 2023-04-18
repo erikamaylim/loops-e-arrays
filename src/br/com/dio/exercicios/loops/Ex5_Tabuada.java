@@ -1,5 +1,6 @@
 package br.com.dio.exercicios.loops;
 
+import java.text.MessageFormat;
 import java.util.Scanner;
 
 /*
@@ -18,12 +19,12 @@ public class Ex5_Tabuada {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Tabuada: ");
+        System.out.print("Tabuada: ");
         int tabuada = scan.nextInt();
 
-        System.out.println("Tabuada de " + tabuada);
-        for(int i = 1; i <= 10; i = i + 1) {
-            System.out.println(tabuada + " X " + i + " = " + (tabuada*i));
+        System.out.printf("***** Tabuada de %d *****%n", tabuada);
+        for(int i = 1; i <= 10; i++) {
+            System.out.printf("%2d X %2d = %3d%n", tabuada, i, (tabuada * i));
         }
     }
 

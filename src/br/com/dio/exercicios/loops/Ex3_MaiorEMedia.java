@@ -1,5 +1,6 @@
 package br.com.dio.exercicios.loops;
 
+import java.text.MessageFormat;
 import java.util.Scanner;
 
 /*
@@ -15,20 +16,25 @@ public class Ex3_MaiorEMedia {
         int maior = 0;
         int soma = 0;
 
-        int count = 0;
+        int count = 1;
         do {
-            System.out.println("Número: ");
+            System.out.print("Número: ");
             numero = scan.nextInt();
+            if (count == 1) {
+                maior = numero;
+            }
 
-            soma = soma + numero;
+            soma += numero;
 
-            if (numero > maior) maior = numero;
+            if (numero > maior) {
+                maior = numero;
+            }
 
-            count = count + 1;
-        } while(count < 5);
+            count++;
+        } while(count <= 5);
 
-        System.out.println("Maior: " + maior);
-        System.out.println("Média: " + (soma/5));
+        System.out.println(MessageFormat.format("Maior: {0}", maior));
+        System.out.println(MessageFormat.format("Média: {0}", (soma/5)));
 
     }
 }

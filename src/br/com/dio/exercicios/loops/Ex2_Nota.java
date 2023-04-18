@@ -1,5 +1,6 @@
 package br.com.dio.exercicios.loops;
 
+import java.text.MessageFormat;
 import java.util.Scanner;
 
 /*
@@ -14,13 +15,15 @@ public class Ex2_Nota {
 
         int nota;
 
-        System.out.println("Nota: ");
+        System.out.print("Nota: ");
         nota = scan.nextInt();
 
-        while(nota < 0 | nota > 10) {
+        while(nota < 0 || nota > 10) {
             System.out.println("Nota Inválida! Digite novamente: ");
             nota = scan.nextInt();
         }
+
+        System.out.println(MessageFormat.format("Nota digitada: {0}", nota));
 
     }
 

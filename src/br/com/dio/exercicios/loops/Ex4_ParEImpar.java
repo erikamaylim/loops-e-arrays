@@ -1,5 +1,6 @@
 package br.com.dio.exercicios.loops;
 
+import java.text.MessageFormat;
 import java.util.Scanner;
 
 /*
@@ -15,21 +16,25 @@ public class Ex4_ParEImpar {
         int numero;
         int quantPares = 0, quantImpares = 0;
 
-        System.out.println("Quantidade de números: ");
+        System.out.print("Quantidade de números: ");
         quantNumeros = scan.nextInt();
 
-        int count = 0;
+        int count = 1;
         do {
-            System.out.println("Número: ");
+            System.out.print("Número: ");
             numero = scan.nextInt();
 
-            if (numero % 2 == 0 ) quantPares++;
-            else quantImpares++;
+            if (numero % 2 == 0 ) {
+                quantPares++;
+            }
+            else {
+                quantImpares++;
+            }
 
             count++;
-        } while(count < quantNumeros);
+        } while(count <= quantNumeros);
 
-        System.out.println("Quantidade Par: " + quantPares);
-        System.out.println("Quantidade Ímpar: " + quantImpares);
+        System.out.println(MessageFormat.format("Quantidade de pares digitados: {0}", quantPares));
+        System.out.println(MessageFormat.format("Quantidade de ímpares digitados: {0}", quantImpares));
     }
 }

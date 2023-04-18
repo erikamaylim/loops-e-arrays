@@ -15,11 +15,11 @@ public class Ex1_NomeEIdade {
         int idade;
 
         while(true) {
-            System.out.println("Nome: ");
+            System.out.print("Nome: ");
             nome = scan.next();
             if (nome.equals("0")) break;
 
-            System.out.println("Idade: ");
+            System.out.print("Idade: ");
             idade = scan.nextInt();
         }
 
